@@ -1,0 +1,20 @@
+﻿@model QAinBraam.Models.CreditScore
+
+@{
+    ViewBag.Title = "CreditScoreView";
+}
+
+<h2>CreditScoreView</h2>
+@using (Html.BeginForm("Calculate", "CreditScore"))
+{
+    <ul>
+        <li>@Html.LabelFor(m => m.Name) @Html.TextBoxFor(m => m.Name)</li>
+        <li>@Html.LabelFor(m => m.AmountOwed) @Html.TextBoxFor(m => m.AmountOwed)</li>
+        <li>@Html.LabelFor(m => m.PaymentHistoryScore) @Html.TextBoxFor(m => m.PaymentHistoryScore)</li>
+        <li>@Html.LabelFor(m => m.CreditMixScore) @Html.TextBoxFor(m => m.CreditMixScore)</li>
+        <li>@Html.LabelFor(m => m.NewCreditScore) @Html.TextBoxFor(m => m.NewCreditScore)</li>
+        <li>@Html.LabelFor(m => m.CreditHistoryLengthScore) @Html.TextBoxFor(m => m.CreditHistoryLengthScore)</li>
+        <li>@Html.LabelFor(m => m.Score) @Html.TextBoxFor(m => m.Score)</li>
+    </ul>
+    <input type="submit" value="Calculate"/>
+}
